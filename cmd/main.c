@@ -21,15 +21,17 @@ void print_help()
 
 void start_antidote_session(char* filename)
 {
+	char* command;
 	pid_t process = loadProcess(filename);
-	char command[256];
+
 	while(1)
 	{
-		scanf("%s",command);
+		scanf("%as", command);
 		if(!strcmp(command, "kill"))
 		{
 			break;
 		}  
+		free(command);
 	}
 }
 
