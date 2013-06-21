@@ -26,7 +26,7 @@ void start_antidote_session(char* filename)
 
 	while(1)
 	{
-		scanf("%as", command);
+		scanf("%as", &command);
 		if(!strcmp(command, "kill"))
 		{
 			break;
